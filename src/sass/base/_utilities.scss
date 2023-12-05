@@ -1,0 +1,95 @@
+// TEXT CENTER
+.u-text-center {
+  text-align: center !important;
+}
+
+// MARGIN BOTTOM
+.u-margin-bottom-big {
+  margin-bottom: 6rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 3rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
+}
+.u-margin-bottom-small {
+  margin-bottom: 1rem !important;
+}
+
+// MARGIN TOP
+.u-margin-top-medium {
+  margin-bottom: 3rem !important;
+
+  @include respond(tab-port) {
+    margin-bottom: 2rem !important;
+  }
+}
+.u-margin-top-small {
+  margin-bottom: 1rem !important;
+}
+
+.u-margin-bottom-top-big {
+  padding: 10rem 0 !important;
+  @include respond(tab-port) {
+    margin-bottom: 5rem 0 !important;
+  }
+}
+.u-margin-right-small {
+  margin-right: 1.5rem !important;
+}
+
+// FONT COLOR
+.u-font-color {
+  color: $color-secondary !important;
+}
+.u-font-color-1 {
+  color: rgba($color-tertiary, 0.7) !important;
+}
+
+// FIT CONTENT
+.u-fit-content {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+// FONT SIZE
+.u-font-size {
+  font-size: 2rem !important;
+}
+.u-font-size-big {
+  font-size: 2.6rem !important;
+}
+
+//TEXT CENTER
+.text-center {
+  display: flex !important;
+  justify-content: center !important;
+  padding: 3rem !important;
+}
+
+// LINE EFFECT
+.u-line-effect {
+  display: inline-block;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 1.5px;
+    position: absolute;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+    background: currentColor;
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+    right: auto;
+  }
+}

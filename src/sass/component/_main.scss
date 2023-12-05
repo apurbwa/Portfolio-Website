@@ -1,0 +1,21 @@
+.mainPart-inner {
+  display: flex;
+
+  .navigation {
+    .res-head-nav {
+      @include respond(tab-port) {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 111;
+      }
+    }
+  }
+
+  .main {
+    width: 80%;
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+}

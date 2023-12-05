@@ -1,0 +1,27 @@
+.section-services {
+  padding: 0 3rem;
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .services-item {
+      border: 1px solid rgba($color-dark-gray-2, 0.3);
+      border-radius: 3px;
+      padding: 4rem;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}

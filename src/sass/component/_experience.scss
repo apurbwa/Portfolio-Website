@@ -1,0 +1,32 @@
+.section-experience {
+  background-color: $color-gray-light-2;
+  padding: 0 3rem;
+
+  .experience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .experience-item {
+      padding: 4rem;
+      background-color: $color-white;
+      border: 1px solid #f9fafc;
+      box-shadow: 30px 40px 80px #e4edf5;
+      border-radius: 3px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    .experience-flex {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

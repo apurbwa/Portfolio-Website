@@ -1,0 +1,63 @@
+.section-hero {
+  background-color: $color-gray-light-2;
+  padding: 0 3rem;
+
+  .hero-row {
+    display: flex;
+    @include respond(tab-port) {
+      flex-direction: column-reverse;
+    }
+
+    .left-hero {
+      width: 50%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      .hero-btn {
+        display: flex;
+        gap: 1.5rem;
+
+        @include respond(phone) {
+          flex-direction: column;
+          width: 40%;
+        }
+      }
+
+      .contact-list {
+        border-left: 5px solid $color-tertiary;
+        display: inline-block;
+
+        ul li {
+          list-style: none;
+          font-size: $default-font-size;
+          margin-left: 2rem;
+          color: $color-primary;
+          transition: all 0.3s;
+
+          &:hover {
+            color: $color-tertiary;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .right-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+        @include respond(tab-port) {
+          padding-top: 6rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.section-about {
+  padding: 0 3rem;
+
+  .about-row {
+    display: flex;
+    gap: 3rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    .about-left {
+      width: 40%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+    .about-right {
+      width: 60%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      .about-contact {
+        display: flex;
+        gap: 2rem;
+
+        .about-contact-info {
+          font-size: $default-font-size;
+          font-weight: 300;
+          text-decoration: underline;
+          text-transform: uppercase;
+          color: $color-dark-gray-1;
+        }
+      }
+    }
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 6rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include respond(phone) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid-item-1,
+    .grid-item-2,
+    .grid-item-3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding: 4rem;
+      background-color: $color-gray-light-3;
+      border-radius: 3px;
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.5);
+        content: "";
+        -webkit-transition: -webkit-transform 0.6s;
+        transition: transform 0.6s;
+        -webkit-transform: scale3d(3.9, 1.4, 1) rotate3d(0, 0, 1, 45deg)
+          translate3d(0, -100%, 0);
+        transform: scale3d(3.9, 1.4, 1) rotate3d(0, 0, 1, 45deg)
+          translate3d(0, -100%, 0);
+      }
+
+      &:hover::before {
+        -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg)
+          translate3d(0, 100%, 0);
+        transform: scale3d(3.9, 1.4, 1) rotate3d(0, 0, 1, 45deg)
+          translate3d(0, 100%, 0);
+      }
+    }
+
+    .grid-item-2 {
+      background-color: $color-gray-light-4 !important;
+    }
+    .grid-item-3 {
+      background-color: $color-gray-light-2 !important;
+    }
+  }
+}

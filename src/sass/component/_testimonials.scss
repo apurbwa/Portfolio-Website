@@ -1,0 +1,25 @@
+.section-testimonials {
+  padding: 0 3rem;
+
+  .testimonials {
+    background-color: #fff5f6;
+
+    .testimonial-item {
+      text-align: center;
+      padding: 10rem;
+
+      .testimonial-clint {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+
+      img {
+        width: 7rem;
+        height: 7rem;
+        border-radius: 50%;
+      }
+    }
+  }
+}

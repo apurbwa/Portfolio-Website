@@ -1,0 +1,67 @@
+.heading-primary {
+  font-size: 5.6rem;
+  color: $color-primary;
+  text-transform: capitalize;
+  font-weight: 700;
+  display: block;
+  line-height: 1.2;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.heading-secondary {
+  font-size: 3.6rem;
+  text-transform: capitalize;
+  font-weight: 800;
+  display: inline-block;
+  color: $color-primary;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  @include respond(tab-port) {
+    font-size: 3rem;
+  }
+  @include respond(phone) {
+    font-size: 2.5rem;
+  }
+}
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.7px;
+  text-transform: capitalize;
+  color: $color-primary;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.heading-paragraph {
+  font-size: $default-font-size;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  line-height: 3rem;
+  display: block;
+  color: $color-dark-gray-1;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.heading-paragraph-sub-1 {
+  font-size: $default-font-size;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+  color: $color-dark-gray-2;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}

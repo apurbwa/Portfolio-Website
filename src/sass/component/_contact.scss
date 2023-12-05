@@ -1,0 +1,83 @@
+.section-contact {
+  background-color: $color-gray-light-2;
+  padding: 0 3rem;
+
+  .contact-row {
+    width: 100%;
+    display: flex;
+    gap: 3rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+    }
+
+    .contact-left {
+      width: 50%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+
+      .contact-info ul li {
+        list-style: none;
+        font-size: 1.6rem;
+        color: $color-primary;
+      }
+    }
+    .contact-right {
+      width: 50%;
+
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form {
+  z-index: 111;
+
+  &__input {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif !important;
+    color: inherit;
+    padding: 2rem 3rem;
+    border: 2px solid rgba($color-dark-gray-3, 0.1);
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 2rem rgba($color-black, 0.1);
+      border: 2px solid rgba($color-primary, 0.3);
+    }
+  }
+
+  .textarea {
+    font-size: 1.6rem;
+    font-family: "Roboto", sans-serif !important;
+    color: inherit;
+    padding: 1.5rem 2rem;
+    border: 2px solid rgba($color-dark-gray-3, 0.1);
+    width: 100%;
+    height: 15rem;
+    display: block;
+    transition: all 0.3s;
+    margin-bottom: 1.5rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0.5rem 2rem rgba($color-black, 0.1);
+      border: 2px solid rgba($color-primary, 0.3);
+    }
+  }
+}
